@@ -13,33 +13,33 @@ public class Lesson2hw {
         int numberR = c*100 + b*10 + a;
         int result = number - numberR;
         System.out.println("Task1");
-        System.out.println("number = " + number);
-        System.out.println("numberR = " + numberR);
-        System.out.println("result = " + result);
+        System.out.println("Number = " + number);
+        System.out.println("New number = " + numberR);
+        System.out.println("Result = " + result);
 
         //
 
         int pounds = 500;
-        double kilog = pounds*0.453592;
-        int kgOnly = (int) kilog;
-        double grams = (kilog - kgOnly)*1000;
+        double kilograms = pounds*0.453592;
+        int kgOnly = (int) kilograms;
+        double grams = (kilograms - kgOnly)*1000;
         int gOnly = (int) grams;
         System.out.println("Task2");
-        System.out.println("pounds = " + pounds + " lbs");
-        System.out.println("result = " + kgOnly + " kg " + gOnly + " g");
+        System.out.println("Pounds = " + pounds + " lbs");
+        System.out.println("Kilograms = " + kgOnly + " kg " + gOnly + " g");
 
         //
-        int start = 10000;
-        double percent = 12.5;
-        int period = 30;
-        int days = 365;
-        int exp = 12;
-        double middle = 1 + percent*period/100/days;
-        double sum = start*Math.pow(middle, exp);
+        int initialDepositAmount = 10000;
+        double annualInterestRate = 12.5;
+        int depositCapitalizationPeriod = 30;
+        int daysInAYear = 365;
+        int numberOfCapitalizationOperations = 12;
+        double middleSum = 1 + annualInterestRate*depositCapitalizationPeriod/100/daysInAYear;
+        double sum = initialDepositAmount*Math.pow(middleSum, numberOfCapitalizationOperations);
         double money = (int) sum;
         System.out.println("Task3");
-        System.out.println("start = " + start + "UAH");
-        System.out.println("result = " + money + " UAH");
+        System.out.println("Original principal sum = " + initialDepositAmount + "UAH");
+        System.out.println("New principal sum = " + money + " UAH");
 
     }
 }
