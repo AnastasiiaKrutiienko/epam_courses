@@ -18,9 +18,14 @@ public class Lesson4HW {
     }
 
     public static String getNumberInBinaryFormat(int number) {
-        String byteCode = Integer.toBinaryString(number);
+        String binaryCode = "";
+        while (number > 0) {
+            int binary = number % 2;
+            binaryCode = binaryCode + binary;
+            number = number / 2;
+        }
 
-        return byteCode;
+        return binaryCode;
     }
 
     public static void main(String[] arg) {
