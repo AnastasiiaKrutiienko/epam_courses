@@ -41,8 +41,6 @@ public class Lesson5HW {
         return separatedArray;
     }
 
-
-
     public static void main(String[] arg) {
         /** Task 1 */
         int[] firstArray = getRandom(new int[20]);
