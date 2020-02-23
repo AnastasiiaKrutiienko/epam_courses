@@ -34,6 +34,7 @@ public class Books {
 
             book.setPrice((int) newPrice);
         }
+
         return books;
     }
 
@@ -58,6 +59,7 @@ public class Books {
                 k++;
             }
         }
+
         return filteredByAuthor;
     }
 
@@ -82,8 +84,28 @@ public class Books {
                 k++;
             }
         }
+
         return filteredByYear;
     }
 
+    public Book[] sortByAuthor(Book[] arrayOfBooks) {
+        Book[] sortedByAuthor = Arrays.copyOf(arrayOfBooks, arrayOfBooks.length);
+        Arrays.sort(sortedByAuthor, new AuthorComparator());
 
+        return sortedByAuthor;
+    }
+
+    public Book[] sortByPublishingHouse(Book[] arrayOfBooks) {
+        Book[] sortedByPublishingHouse = Arrays.copyOf(arrayOfBooks, arrayOfBooks.length);
+        Arrays.sort(sortedByPublishingHouse, new PublishingHouseComparator());
+
+        return sortedByPublishingHouse;
+    }
+
+    public Book[] sortByPrice(Book[] arrayOfBooks) {
+        Book[] sortedByPrice = Arrays.copyOf(arrayOfBooks, arrayOfBooks.length);
+        Arrays.sort(sortedByPrice, new PriceComparator());
+
+        return sortedByPrice;
+    }
 }
