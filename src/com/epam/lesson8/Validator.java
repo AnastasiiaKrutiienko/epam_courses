@@ -1,59 +1,54 @@
 package com.epam.lesson8;
 
 import java.util.Scanner;
-import java.lang.Exception;
 
 public class Validator {
 
   public static int validationOfDiscount(Scanner scannerOfDiscount) {
-    try {
-      if (!scannerOfDiscount.hasNextInt()) {
-        throw new Exception( "The data is not a number ");
+    int number = 0;
+    int min = 1;
+    int max = 99;
+
+    do {
+      while (!scannerOfDiscount.hasNextInt()) {
+        System.out.println("Discount should be a number");
+        scannerOfDiscount.next();
       }
 
-      if (scannerOfDiscount.nextInt() < 1) {
-        throw new Exception( "The number is less than 1");
-      }
+      number = scannerOfDiscount.nextInt();
 
-      if (scannerOfDiscount.nextInt() > 99) {
-        throw new Exception( "The number is more than 99");
-      }
-    } catch(Exception ex){
-      System.out.println(ex.getMessage());
-    }
+      if (number < min || number > max)
+        System.out.println("Discount should be in range from 1 to 99");
 
-    return scannerOfDiscount.nextInt();
+    } while (number < min || number > max);
+
+    return number;
   }
 
   public static int validationOfYear(Scanner scannerOfYear) {
-    try {
-      if (!scannerOfYear.hasNextInt()) {
-        throw new Exception( "The data is not a number ");
+    int number = 0;
+    int min = 1900;
+    int max = 2020;
+
+    do {
+      while (!scannerOfYear.hasNextInt()) {
+        System.out.println("Year should be a number");
+        scannerOfYear.next();
       }
 
-      if (scannerOfYear.nextInt() < 1900) {
-        throw new Exception( "The year is earlier than 1900");
-      }
+      number = scannerOfYear.nextInt();
 
-      if (scannerOfYear.nextInt() > 2020) {
-        throw new Exception( "The year is later than 2020");
-      }
-    } catch(Exception ex){
-      System.out.println(ex.getMessage());
-    }
+      if (number < min || number > max)
+        System.out.println("Year should be in range from 1900 to 2020");
 
-    return scannerOfYear.nextInt();
+    } while (number < min || number > max);
+
+    return number;
   }
 
-  public static String  validationOfAuthor(Scanner scannerOfAuthor) {
-    try {
-      if (!scannerOfAuthor.hasNextLine()) {
-        throw new Exception("The data is not a text ");
-      }
-    } catch (Exception ex){
-      System.out.println(ex.getMessage());
-    }
+  public static String validationOfAuthor(Scanner scannerOfAuthor) {
+    String author = scannerOfAuthor.nextLine();
 
-    return scannerOfAuthor.nextLine();
+    return author;
   }
 }

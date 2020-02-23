@@ -67,15 +67,15 @@ public class Main {
         int year = Validator.validationOfYear(scannerOfYear);
         books.printBooks(books.findByYear(year));
 
-//        Book[] arrayOfBooks = books.getBooks();
-//
-//        Book[] sortedByAuthor = books.sortByAuthor(arrayOfBooks);
-//        books.printBooks(sortedByAuthor);
-//
-//        Book[] sortedByPublishingHouse = books.sortByPublishingHouse(arrayOfBooks);
-//        books.printBooks(sortedByPublishingHouse);
-//
-//        Book[] sortedByPrice = books.sortByPrice(arrayOfBooks);
-//        books.printBooks(sortedByPrice);
+        Book[] arrayOfBooks = books.getBooks();
+
+        Book[] sortedByAuthor = books.sortByAuthor(arrayOfBooks);
+        books.printBooks(sortedByAuthor);
+
+        Book[] sortedByPublishingHouse = books.sortByPublishingHouse(arrayOfBooks);
+        books.printBooks(sortedByPublishingHouse);
+
+        Book[] sortedByPrice = books.sortByPrice(arrayOfBooks);
+        books.printBooks(sortedByPrice);
     }
 }
