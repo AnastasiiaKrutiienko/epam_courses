@@ -52,30 +52,30 @@ public class Main {
                 270
         ));
 
-        System.out.println("Please, type the discount");
-        Scanner scannerOfDiscount = new Scanner(System.in);
-        int discount = Validator.validationOfDiscount(scannerOfDiscount);
-        books.printBooks(books.changePrice(discount));
+//        System.out.println("Please, type the discount");
+//        Scanner scannerOfDiscount = new Scanner(System.in);
+//        int discount = Validator.validationOfDiscount(scannerOfDiscount);
+//        books.printBooks(books.changePrice(discount));
 
         System.out.println("Please, type the author to find");
         Scanner scannerOfAuthor = new Scanner(System.in);
         String author = Validator.validationOfAuthor(scannerOfAuthor);
         books.printBooks(books.findAuthor(author));
 
-        System.out.println("Please, type the year to find");
-        Scanner scannerOfYear = new Scanner(System.in);
-        int year = Validator.validationOfYear(scannerOfYear);
-        books.printBooks(books.findByYear(year));
-
-        Book[] arrayOfBooks = books.getBooks();
-
-        Book[] sortedByAuthor = books.sortByAuthor(arrayOfBooks);
-        books.printBooks(sortedByAuthor);
-
-        Book[] sortedByPublishingHouse = books.sortByPublishingHouse(arrayOfBooks);
-        books.printBooks(sortedByPublishingHouse);
-
-        Book[] sortedByPrice = books.sortByPrice(arrayOfBooks);
-        books.printBooks(sortedByPrice);
+//        System.out.println("Please, type the year to find");
+//        Scanner scannerOfYear = new Scanner(System.in);
+//        int year = Validator.validationOfYear(scannerOfYear);
+//        books.printBooks(books.findByYear(year));
+//
+//        Book[] arrayOfBooks = books.getBooks();
+//
+//        Book[] sortedByAuthor = books.sortByAuthor(arrayOfBooks);
+//        books.printBooks(sortedByAuthor);
+//
+//        Book[] sortedByPublishingHouse = books.sortByPublishingHouse(arrayOfBooks);
+//        books.printBooks(sortedByPublishingHouse);
+//
+//        Book[] sortedByPrice = books.sortByPrice(arrayOfBooks);
+//        books.printBooks(sortedByPrice);
     }
 }

@@ -48,6 +48,14 @@ public class Validator {
 
   public static String validationOfAuthor(Scanner scannerOfAuthor) {
     String author = scannerOfAuthor.nextLine();
+    String regex = "[a-zA-Z]*";
+
+    do {
+      if (!author.matches(regex)) {
+        System.out.println("The author name must contain only a-zA-Z characters");
+        scannerOfAuthor.next();
+      }
+    } while (author.matches(regex));
 
     return author;
   }
